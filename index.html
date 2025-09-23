@@ -1089,31 +1089,49 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .logo-img {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 35px;
+    }
+}
     </style>
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-palette"></i> Rudo Productions
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
+<header id="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Rudo Productions Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
 
     <!-- Back to Top Button -->
     <div class="back-to-top">
@@ -1694,6 +1712,7 @@ ${name}
 </script>
 </body>
 </html>
+
 
 
 
