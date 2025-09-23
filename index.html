@@ -1121,26 +1121,23 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Transform Your Brand With Stunning Designs</h1>
-                    <p>We create visually compelling graphics that communicate your brand's message and captivate your audience. Professional design services at affordable prices.</p>
-                    <div class="hero-buttons">
-                        <a href="#packages" class="btn">View Packages</a>
-                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for hero image -->
-                    <div style="width:100%; height:400px; background:linear-gradient(135deg, #E63946, #FF6584); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
-                        Rudo Productions<br>Design Studio
-                    </div>
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transform Your Brand With Stunning Designs</h1>
+                <p>We create visually compelling graphics that communicate your brand's message and captivate your audience. Professional design services at affordable prices.</p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="rudo.jpg" alt="Rudo Productions Design Work" loading="lazy">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -1248,166 +1245,103 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>Check out some of our recent design projects</p>
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Portfolio</h2>
+            <p>Check out some of our recent design projects</p>
+        </div>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="print">Print</button>
+            <button class="filter-btn" data-filter="social">Social Media</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item fade-in" data-category="branding">
+                <img src="food.jpg" alt="Food and Catering Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Brand Identity</h3>
+                    <p>Catering Business</p>
+                </div>
             </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
-                <button class="filter-btn" data-filter="print">Print</button>
-                <button class="filter-btn" data-filter="social">Social Media</button>
+            <div class="portfolio-item fade-in" data-category="web">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Design Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>UI/UX Design</h3>
+                    <p>Business Website</p>
+                </div>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in" data-category="branding">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FF9A9E, #FAD0C4); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Food Branding
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Brand Identity</h3>
-                        <p>Catering Business</p>
-                    </div>
+            <div class="portfolio-item fade-in" data-category="print">
+                <img src="brands.jpg" alt="Brand Design Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Print Design</h3>
+                    <p>Business Brands</p>
                 </div>
-                <div class="portfolio-item fade-in" data-category="web">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #A1C4FD, #C2E9FB); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Website Design
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>UI/UX Design</h3>
-                        <p>Business Website</p>
-                    </div>
+            </div>
+            <div class="portfolio-item fade-in" data-category="branding">
+                <img src="motor.jpg" alt="Packaging Design Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Packaging Design</h3>
+                    <p>Product Branding</p>
                 </div>
-                <div class="portfolio-item fade-in" data-category="print">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FFECD2, #FCB69F); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Business Cards
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Print Design</h3>
-                        <p>Corporate Branding</p>
-                    </div>
+            </div>
+            <div class="portfolio-item fade-in" data-category="social">
+                <img src="programs.jpg" alt="Social Media Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Social Media</h3>
+                    <p>Marketing Graphics</p>
                 </div>
-                <div class="portfolio-item fade-in" data-category="branding">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #84FAB0, #8FD3F4); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Product Packaging
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Packaging Design</h3>
-                        <p>Product Branding</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="social">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #D4FC79, #96E6A1); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Social Campaign
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Social Media</h3>
-                        <p>Marketing Graphics</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="print">
-                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FDCBF1, #E6DEE9); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
-                        Restaurant Menu
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Menu Design</h3>
-                        <p>Food & Beverage</p>
-                    </div>
+            </div>
+            <div class="portfolio-item fade-in" data-category="print">
+                <img src="menus.jpg" alt="Photo Editing Project" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Menu Design</h3>
+                    <p>Food & Beverage</p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
+    
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
-                <p>Get to know our creative team</p>
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Get to know our creative team</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="about.jpg" alt="Rudo Productions Team" loading="lazy">
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <!-- Placeholder for about image -->
-                    <div style="width:100%; height:400px; background:linear-gradient(135deg, #2D2B55, #E63946); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
-                        Rudo Productions Team
+            <div class="about-text">
+                <h2>We Create Designs That Speak</h2>
+                <p>Rudo Productions is a passionate team of graphic designers dedicated to delivering exceptional visual solutions. With years of experience, we've helped businesses of all sizes establish strong brand identities and communicate effectively with their audiences.</p>
+                <p>Our approach combines creativity with strategy, ensuring that every design not only looks beautiful but also serves a purpose and achieves your business goals.</p>
+                <p>We believe in collaboration, innovation, and exceeding expectations with every project we undertake.</p>
+                <a href="#contact" class="btn">Let's Work Together</a>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Projects Completed</span>
                     </div>
-                </div>
-                <div class="about-text">
-                    <h2>We Create Designs That Speak</h2>
-                    <p>Rudo Productions is a passionate team of graphic designers dedicated to delivering exceptional visual solutions. With years of experience, we've helped businesses of all sizes establish strong brand identities and communicate effectively with their audiences.</p>
-                    <p>Our approach combines creativity with strategy, ensuring that every design not only looks beautiful but also serves a purpose and achieves your business goals.</p>
-                    <p>We believe in collaboration, innovation, and exceeding expectations with every project we undertake.</p>
-                    <a href="#contact" class="btn">Let's Work Together</a>
-                    
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number" data-count="50">0</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="35">0</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="3">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="35">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about our work</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        Rudo Productions transformed our brand identity with their creative designs. The logo and branding package they delivered exceeded our expectations.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Small Business Owner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        The social media graphics Rudo created for our campaign significantly increased our engagement rates. Highly recommended!
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Michael Brown</h4>
-                            <p>Marketing Manager</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        Professional, timely, and affordable. Rudo Productions delivered exactly what we needed for our startup's branding.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">T</div>
-                        <div class="author-info">
-                            <h4>Thabo Mbeki</h4>
-                            <p>Entrepreneur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </div>
+</section>
+    
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1506,8 +1440,6 @@
                     <div class="social-links">
                         <a href="https://www.instagram.com/rudo_productionsinc" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/rudoproductions" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1777,5 +1709,6 @@ ${name}
 </script>
 </body>
 </html>
+
 
 
