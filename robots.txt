@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://rudoProductions.github.io/sitemap.xml
