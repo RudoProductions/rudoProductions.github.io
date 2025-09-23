@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <title>Rudo Productions | Creative Graphic Design Studio</title>
-<meta name="description" content="Rudo Productions specializes in branding, logos, UI/UX design, and creative visuals.">
-<meta name="keywords" content="graphic design, branding, logo design, UI/UX, creative studio, Rudo Productions">
-<meta name="author" content="Rudo Productions">
+    <meta name="description" content="Rudo Productions specializes in branding, logos, UI/UX design, and creative visuals.">
+    <meta name="keywords" content="graphic design, branding, logo design, UI/UX, creative studio, Rudo Productions">
+    <meta name="author" content="Rudo Productions">
 
-<!-- Open Graph for social sharing -->
-<meta property="og:title" content="Rudo Productions - Graphic Design Studio">
-<meta property="og:description" content="Creative graphic design services including logos, branding, and UI/UX.">
-<meta property="og:image" content="https://rudoProductions.github.io/logo.png">
-<meta property="og:url" content="https://rudoProductions.github.io/">
-<meta property="og:type" content="website">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Rudo Productions - Graphic Design Studio">
+    <meta property="og:description" content="Creative graphic design services including logos, branding, and UI/UX.">
+    <meta property="og:image" content="https://rudo_productions.github.io/logo.png">
+    <meta property="og:url" content="https://rudo_productions.github.io/">
+    <meta property="og:type" content="website">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudo Productions | Graphic Design Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -677,6 +676,26 @@
                 font-size: 28px;
             }
         }
+        
+        /* Form Message Styles */
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
     </style>
 </head>
 <body>
@@ -685,7 +704,6 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <!-- Replace "logo.jpg" with the actual path to your logo file -->
                     <img src="logo.png" alt="RudoDesign Logo" class="logo-img">
                 </a>
                 <ul class="nav-links">
@@ -930,7 +948,7 @@
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <p>info@rudoproductions.com</p>
+                                <p>rudoproductionsinc@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-detail">
@@ -945,18 +963,22 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="designForm">
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number">
                         </div>
                         <div class="form-group">
                             <label for="package">Package Interested In</label>
-                            <select id="package" class="form-control" required>
+                            <select id="package" name="package" class="form-control" required>
                                 <option value="">Select a package</option>
                                 <option value="basic">Basic Package (R200-R400)</option>
                                 <option value="standard">Standard Package (R600-R900)</option>
@@ -966,9 +988,10 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell us about your project" required></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
+                        <div id="form-message" class="form-message"></div>
                     </form>
                 </div>
             </div>
@@ -1052,31 +1075,68 @@
             });
         });
         
-        // Form submission
-        document.getElementById('designForm').addEventListener('submit', function(e) {
+        // Email Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thanks for your message! We will get back to you soon.');
-            this.reset();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('form-message');
+            const originalBtnText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Preparing Email...';
+            submitBtn.disabled = true;
+            messageDiv.innerHTML = '';
+            messageDiv.className = 'form-message';
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const package = document.getElementById('package').value;
+            const message = document.getElementById('message').value;
+            
+            // Create email content
+            const subject = `Design Inquiry from ${name} - ${package}`;
+            const body = `
+Hello Rudo Productions,
+
+I would like to inquire about your design services:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+Package Interested In: ${package}
+
+Project Details:
+${message}
+
+I found you through your website and I'm looking forward to working with you!
+
+Best regards,
+${name}
+            `;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:rudoproductionsinc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Show success message
+            messageDiv.innerHTML = '📧 Opening your email client... Please send the pre-filled email to contact us!';
+            messageDiv.className = 'form-message success';
+            
+            // Open email client after a short delay
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 1000);
+            
+            // Reset form and button after a delay
+            setTimeout(() => {
+                form.reset();
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }, 3000);
         });
     </script>
-    <!-- Sitemap for Google (hidden from users) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Rudo Productions",
-  "url": "https://rudoProductions.github.io",
-  "description": "Professional graphic design services including branding, social media graphics, and custom designs",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://rudoProductions.github.io#contact",
-    "query-input": "required name=searchterm"
-  }
-}
-</script>
 </body>
 </html>
-
-
-
-
