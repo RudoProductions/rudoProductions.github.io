@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rudo Productions | Creative Graphic Design Studio</title>
-    <meta name="description" content="Rudo Productions specializes in branding, logos, UI/UX design, and creative visuals.">
-    <meta name="keywords" content="graphic design, branding, logo design, UI/UX, creative studio, Rudo Productions">
-    <meta name="author" content="Rudo Productions">
-
-    <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Rudo Productions - Graphic Design Studio">
-    <meta property="og:description" content="Creative graphic design services including logos, branding, and UI/UX.">
-    <meta property="og:image" content="https://rudoproductions.github.io/logo.png">
-    <meta property="og:url" content="https://rudoproductions.github.io/">
-    <meta property="og:type" content="website">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Rudo Productions | Professional Graphic Design Studio South Africa</title>
+    <meta name="title" content="Rudo Productions | Professional Graphic Design Studio South Africa">
+    <meta name="description" content="Professional graphic design services in South Africa. Branding, logos, UI/UX design. Affordable packages starting at R200. Get your custom design today!">
+    <meta name="keywords" content="graphic design south africa, branding, logo design, UI/UX, creative studio, Rudo Productions, affordable graphic design, website design">
+    <meta name="author" content="Rudo Productions">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rudoproductions.github.io/">
+    <meta property="og:title" content="Rudo Productions | Professional Graphic Design Studio">
+    <meta property="og:description" content="Transform your brand with stunning designs. Professional graphic design services including logos, branding, and UI/UX.">
+    <meta property="og:image" content="https://rudoproductions.github.io/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rudoproductions.github.io/">
+    <meta property="twitter:title" content="Rudo Productions | Professional Graphic Design Studio">
+    <meta property="twitter:description" content="Transform your brand with stunning designs. Professional graphic design services including logos, branding, and UI/UX.">
+    <meta property="twitter:image" content="https://rudoproductions.github.io/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rudoproductions.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Rudo Productions",
+      "description": "Professional graphic design studio offering branding, logo design, and UI/UX services in South Africa",
+      "url": "https://rudoproductions.github.io",
+      "telephone": "+27-XXX-XXX-XXXX",
+      "email": "rudoproductionsinc@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "South Africa"
+      },
+      "areaServed": "South Africa",
+      "serviceType": "Graphic Design",
+      "priceRange": "R200 - R1500",
+      "openingHours": "Mo-Su 09:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/rudo_productionsinc",
+        "https://www.facebook.com/rudoproductions"
+      ]
+    }
+    </script>
+    
     <style>
         /* Global Styles */
         :root {
-            --primary: red;
+            --primary: #E63946;
             --secondary: #FF6584;
             --dark: #2D2B55;
             --light: #F8F9FC;
             --gray: #7B88A8;
+            --success: #28a745;
+            --warning: #ffc107;
         }
         
         * {
@@ -41,6 +91,7 @@
             color: var(--dark);
             background-color: var(--light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         .container {
@@ -61,6 +112,7 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            text-align: center;
         }
         
         .btn:hover {
@@ -108,6 +160,12 @@
             border-radius: 2px;
         }
         
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+        
         /* Header & Navigation */
         header {
             position: fixed;
@@ -115,7 +173,8 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(45, 43, 85, 0.95);
+            backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 15px 0;
             transition: all 0.3s ease;
@@ -123,6 +182,7 @@
         
         header.sticky {
             padding: 10px 0;
+            background: rgba(45, 43, 85, 0.98);
         }
         
         .navbar {
@@ -135,12 +195,14 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
         }
         
-        .logo-img {
-            height: 50px;
-            width: auto;
-            transition: all 0.3s ease;
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary);
         }
         
         .nav-links {
@@ -154,24 +216,57 @@
         
         .nav-links a {
             text-decoration: none;
-            color: white; 
+            color: white;
             font-weight: 500;
             transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
             color: var(--primary);
         }
         
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
         .hamburger {
             display: none;
             cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
         }
         
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(255, 101, 132, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(255, 101, 132, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.05) 0%, transparent 70%);
+            z-index: -1;
         }
         
         .hero-content {
@@ -197,15 +292,39 @@
             margin-bottom: 30px;
         }
         
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
         .hero-image {
             flex: 1;
             text-align: center;
+            position: relative;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            z-index: -1;
         }
         
         .hero-image img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
         }
         
         /* Services Section */
@@ -226,6 +345,23 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(230, 57, 70, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
         }
         
         .service-card:hover {
@@ -236,7 +372,7 @@
         .service-icon {
             width: 70px;
             height: 70px;
-            background: rgba(255, 0, 0, 0.1);
+            background: rgba(230, 57, 70, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -244,6 +380,13 @@
             margin: 0 auto 20px;
             color: var(--primary);
             font-size: 28px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotateY(180deg);
         }
         
         .service-card h3 {
@@ -272,6 +415,7 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            position: relative;
         }
         
         .package-card:hover {
@@ -279,11 +423,26 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
+        .package-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 30px;
+            font-size: 12px;
+            font-weight: 600;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+        
         .package-header {
             background: var(--primary);
             color: white;
             padding: 25px;
             text-align: center;
+            position: relative;
         }
         
         .package-header h3 {
@@ -332,11 +491,35 @@
             font-style: italic;
             text-align: center;
             margin-top: 20px;
+            font-size: 14px;
         }
         
         /* Portfolio Section */
         .portfolio {
             background: white;
+        }
+        
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
         }
         
         .portfolio-grid {
@@ -372,6 +555,8 @@
             justify-content: center;
             opacity: 0;
             transition: all 0.3s ease;
+            padding: 20px;
+            text-align: center;
         }
         
         .portfolio-item:hover .portfolio-overlay {
@@ -413,12 +598,30 @@
         
         .about-image {
             flex: 1;
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            z-index: -1;
         }
         
         .about-image img {
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
         }
         
         .about-text {
@@ -434,9 +637,95 @@
             color: var(--gray);
         }
         
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 60px;
+            color: rgba(230, 57, 70, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.05) 0%, rgba(255, 101, 132, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.05) 0%, rgba(255, 101, 132, 0.05) 100%);
         }
         
         .contact-container {
@@ -474,6 +763,7 @@
             color: white;
             font-size: 20px;
             margin-right: 15px;
+            flex-shrink: 0;
         }
         
         .contact-form {
@@ -506,7 +796,7 @@
         .form-control:focus {
             border-color: var(--primary);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
         }
         
         textarea.form-control {
@@ -599,6 +889,54 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #d90000;
+            transform: translateY(-5px);
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
         
         /* Responsive Styles */
@@ -620,6 +958,14 @@
             .hero-text {
                 text-align: center;
             }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .stats {
+                justify-content: space-around;
+            }
         }
         
         @media (max-width: 768px) {
@@ -634,6 +980,7 @@
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s ease;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
             
             .nav-links.active {
@@ -646,12 +993,11 @@
             
             .nav-links a {
                 color: var(--dark);
+                font-size: 18px;
             }
             
             .hamburger {
                 display: block;
-                font-size: 24px;
-                color: white;
             }
             
             .hero-text h1 {
@@ -662,18 +1008,46 @@
                 font-size: 28px;
             }
             
-            .logo-img {
+            .package-price {
+                font-size: 28px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
                 height: 40px;
+                font-size: 16px;
             }
         }
         
         @media (max-width: 480px) {
-            .logo-img {
-                height: 35px;
+            .hero-text h1 {
+                font-size: 28px;
             }
             
-            .package-price {
-                font-size: 28px;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .section-title h2 {
+                font-size: 24px;
+            }
+            
+            .package-card.popular::before {
+                font-size: 10px;
+                right: -35px;
+                padding: 5px 35px;
             }
         }
         
@@ -683,6 +1057,7 @@
             padding: 10px;
             border-radius: 5px;
             text-align: center;
+            font-weight: 500;
         }
         
         .form-message.success {
@@ -696,6 +1071,18 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -704,7 +1091,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <img src="logo.png" alt="RudoDesign Logo" class="logo-img">
+                    <i class="fas fa-palette"></i> Rudo Productions
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -712,14 +1099,20 @@
                     <li><a href="#packages">Packages</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -727,14 +1120,17 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Transform Your Brand With Stunning Designs</h1>
-                    <p>We create visually compelling graphics that communicate your brand's message and captivate your audience.</p>
+                    <p>We create visually compelling graphics that communicate your brand's message and captivate your audience. Professional design services at affordable prices.</p>
                     <div class="hero-buttons">
                         <a href="#packages" class="btn">View Packages</a>
                         <a href="#contact" class="btn btn-outline">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="rudo.jpg" alt="Rudo Design Work">
+                    <!-- Placeholder for hero image -->
+                    <div style="width:100%; height:400px; background:linear-gradient(135deg, #E63946, #FF6584); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
+                        Rudo Productions<br>Design Studio
+                    </div>
                 </div>
             </div>
         </div>
@@ -748,28 +1144,28 @@
                 <p>We offer a wide range of graphic design services to meet your business needs</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3>Brand Identity</h3>
                     <p>Logo design, color palettes, typography, and brand guidelines to create a cohesive brand identity.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-desktop"></i>
                     </div>
                     <h3>UI/UX Design</h3>
                     <p>User-friendly interfaces and experiences that enhance engagement and conversion rates.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Social Media Graphics</h3>
                     <p>Eye-catching visuals for your social media channels that drive engagement and growth.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-camera"></i>
                     </div>
@@ -788,7 +1184,7 @@
                 <p>Affordable pricing options for every need</p>
             </div>
             <div class="packages-grid">
-                <div class="package-card">
+                <div class="package-card fade-in">
                     <div class="package-header">
                         <h3>BASIC PACKAGE</h3>
                         <div class="package-price">R200 - R400</div>
@@ -804,7 +1200,7 @@
                     </div>
                 </div>
                 
-                <div class="package-card">
+                <div class="package-card popular fade-in">
                     <div class="package-header">
                         <h3>STANDARD PACKAGE</h3>
                         <div class="package-price">R600 - R900</div>
@@ -821,7 +1217,7 @@
                     </div>
                 </div>
                 
-                <div class="package-card">
+                <div class="package-card fade-in">
                     <div class="package-header">
                         <h3>ADVANCED PACKAGE</h3>
                         <div class="package-price">R1200 - R1500</div>
@@ -852,47 +1248,66 @@
                 <h2>Our Portfolio</h2>
                 <p>Check out some of our recent design projects</p>
             </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="print">Print</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="food.jpg" alt="Food and Catering Project">
+                <div class="portfolio-item fade-in" data-category="branding">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FF9A9E, #FAD0C4); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Food Branding
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>Brand Identity</h3>
-                        <p>Catering</p>
+                        <p>Catering Business</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Web Design Project">
+                <div class="portfolio-item fade-in" data-category="web">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #A1C4FD, #C2E9FB); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Website Design
+                    </div>
                     <div class="portfolio-overlay">
-                        <h3>Website Design</h3>
-                        <p>UI/UX Design</p>
+                        <h3>UI/UX Design</h3>
+                        <p>Business Website</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="brands.jpg" alt="Brand Design Project">
+                <div class="portfolio-item fade-in" data-category="print">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FFECD2, #FCB69F); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Business Cards
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>Print Design</h3>
-                        <p>Business Brands</p>
+                        <p>Corporate Branding</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="motor.jpg" alt="Packaging Design Project">
+                <div class="portfolio-item fade-in" data-category="branding">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #84FAB0, #8FD3F4); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Product Packaging
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>Packaging Design</h3>
-                        <p>Product Packaging</p>
+                        <p>Product Branding</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="programs.jpg" alt="Social Media Project">
+                <div class="portfolio-item fade-in" data-category="social">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #D4FC79, #96E6A1); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Social Campaign
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>Social Media</h3>
-                        <p>Campaign Graphics</p>
+                        <p>Marketing Graphics</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="menus.jpg" alt="Photo Editing Project">
+                <div class="portfolio-item fade-in" data-category="print">
+                    <div style="width:100%; height:100%; background:linear-gradient(45deg, #FDCBF1, #E6DEE9); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:20px;">
+                        Restaurant Menu
+                    </div>
                     <div class="portfolio-overlay">
-                        <h3>Photo Editing</h3>
-                        <p>Food Menu</p>
+                        <h3>Menu Design</h3>
+                        <p>Food & Beverage</p>
                     </div>
                 </div>
             </div>
@@ -908,7 +1323,10 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="about.jpg" alt="Our Team">
+                    <!-- Placeholder for about image -->
+                    <div style="width:100%; height:400px; background:linear-gradient(135deg, #2D2B55, #E63946); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
+                        Rudo Productions Team
+                    </div>
                 </div>
                 <div class="about-text">
                     <h2>We Create Designs That Speak</h2>
@@ -916,6 +1334,69 @@
                     <p>Our approach combines creativity with strategy, ensuring that every design not only looks beautiful but also serves a purpose and achieves your business goals.</p>
                     <p>We believe in collaboration, innovation, and exceeding expectations with every project we undertake.</p>
                     <a href="#contact" class="btn">Let's Work Together</a>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="35">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our work</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        Rudo Productions transformed our brand identity with their creative designs. The logo and branding package they delivered exceeded our expectations.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        The social media graphics Rudo created for our campaign significantly increased our engagement rates. Highly recommended!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Michael Brown</h4>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        Professional, timely, and affordable. Rudo Productions delivered exactly what we needed for our startup's branding.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4>Thabo Mbeki</h4>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -957,7 +1438,16 @@
                             </div>
                             <div>
                                 <h4>Instagram</h4>
-                                <p>rudo_productionsinc</p>
+                                <p>@rudo_productionsinc</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4>Facebook</h4>
+                                <p>Rudo Productions</p>
                             </div>
                         </div>
                     </div>
@@ -965,11 +1455,11 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Your Name</label>
+                            <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group">
@@ -977,7 +1467,7 @@
                             <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number">
                         </div>
                         <div class="form-group">
-                            <label for="package">Package Interested In</label>
+                            <label for="package">Package Interested In *</label>
                             <select id="package" name="package" class="form-control" required>
                                 <option value="">Select a package</option>
                                 <option value="basic">Basic Package (R200-R400)</option>
@@ -987,10 +1477,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Your Message</label>
+                            <label for="message">Your Message *</label>
                             <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn" id="submitBtn">
+                            <span id="btnText">Send Message</span>
+                        </button>
                         <div id="form-message" class="form-message"></div>
                     </form>
                 </div>
@@ -1006,18 +1498,20 @@
                     <h3>Rudo Productions</h3>
                     <p>Transforming ideas into visually stunning designs that communicate, engage, and inspire.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/rudo_productionsinc?igsh=MWF5a2lobHU0eHg5aQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1HvvCFr7W1/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/rudo_productionsinc" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/rudoproductions" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Brand Identity</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Print Design</a></li>
-                        <li><a href="#">Social Media Graphics</a></li>
-                        <li><a href="#">Photo Editing</a></li>
+                        <li><a href="#services">Brand Identity</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Print Design</a></li>
+                        <li><a href="#services">Social Media Graphics</a></li>
+                        <li><a href="#services">Photo Editing</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1037,11 +1531,12 @@
                         <li><a href="#packages">Basic Package</a></li>
                         <li><a href="#packages">Standard Package</a></li>
                         <li><a href="#packages">Advanced Package</a></li>
+                        <li><a href="#contact">Custom Quote</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Rudo Productions. All Rights Reserved.</p>
+                <p>&copy; 2025 Rudo Productions. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> by Rudo Productions</p>
             </div>
         </div>
     </footer>
@@ -1050,10 +1545,18 @@
         // Sticky Header
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
+            const backToTop = document.querySelector('.back-to-top');
+            
             if (window.scrollY > 50) {
                 header.classList.add('sticky');
             } else {
                 header.classList.remove('sticky');
+            }
+            
+            if (window.scrollY > 500) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
             }
         });
         
@@ -1075,17 +1578,106 @@
             });
         });
         
+        // Back to Top Button
+        document.querySelector('.back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Portfolio Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Animate Stats Counter
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+        
+        // Scroll Animation
+        function checkScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initialize animations on page load
+        window.addEventListener('load', function() {
+            checkScroll();
+            
+            // Animate stats when about section is in view
+            const aboutSection = document.getElementById('about');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(aboutSection);
+                    }
+                });
+            });
+            
+            observer.observe(aboutSection);
+        });
+        
+        window.addEventListener('scroll', checkScroll);
+        
         // Email Form Submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const form = this;
             const submitBtn = form.querySelector('button[type="submit"]');
+            const btnText = document.getElementById('btnText');
             const messageDiv = document.getElementById('form-message');
-            const originalBtnText = submitBtn.textContent;
+            const originalBtnText = btnText.textContent;
             
             // Show loading state
-            submitBtn.textContent = 'Preparing Email...';
+            btnText.innerHTML = '<span class="loading"></span>Sending...';
             submitBtn.disabled = true;
             messageDiv.innerHTML = '';
             messageDiv.className = 'form-message';
@@ -1097,8 +1689,17 @@
             const package = document.getElementById('package').value;
             const message = document.getElementById('message').value;
             
+            // Simple email validation
+            if (!email.includes('@') || !email.includes('.')) {
+                messageDiv.innerHTML = 'Please enter a valid email address.';
+                messageDiv.className = 'form-message error';
+                btnText.textContent = originalBtnText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
             // Create email content
-            const subject = `Design Inquiry from ${name} - ${package}`;
+            const subject = `Design Inquiry from ${name} - ${package} Package`;
             const body = `
 Hello Rudo Productions,
 
@@ -1128,16 +1729,45 @@ ${name}
             // Open email client after a short delay
             setTimeout(() => {
                 window.location.href = mailtoLink;
-            }, 1000);
+            }, 1500);
             
             // Reset form and button after a delay
             setTimeout(() => {
                 form.reset();
-                submitBtn.textContent = originalBtnText;
+                btnText.textContent = originalBtnText;
                 submitBtn.disabled = false;
-            }, 3000);
+                
+                // Keep success message for a bit longer
+                setTimeout(() => {
+                    messageDiv.innerHTML = '';
+                    messageDiv.className = 'form-message';
+                }, 5000);
+            }, 4000);
         });
     </script>
+    <!-- Schema.org Business Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rudo Productions",
+  "url": "https://rudoproductions.github.io",
+  "logo": "https://rudoproductions.github.io/logo.png",
+  "description": "Professional graphic design studio in South Africa specializing in branding, logos, and UI/UX design",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "South Africa"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "rudoproductionsinc@gmail.com",
+    "contactType": "Customer Service"
+  },
+  "sameAs": [
+    "https://www.instagram.com/rudo_productionsinc",
+    "https://www.facebook.com/rudoproductions"
+  ]
+}
+</script>
 </body>
 </html>
-
